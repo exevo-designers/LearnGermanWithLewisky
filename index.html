@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn German with Lewisky - Online Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, .font-fun {
+            font-family: 'Fredoka One', cursive;
+        }
+        .card-bounce:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        .review-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fefce8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ef4444;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-black text-white p-2 rounded-xl w-10 h-10 flex items-center justify-center font-bold text-xl">L</div>
+                <span class="text-xl font-fun text-red-600 leading-tight">Learn German with Lewisky</span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8 font-semibold">
+                <a href="#home" class="hover:text-red-500 transition">Home</a>
+                <a href="#lessons" class="hover:text-red-500 transition">Play & Learn</a>
+                <a href="#achievements" class="hover:text-red-500 transition">Achievements</a>
+                <a href="#reviews" class="hover:text-red-500 transition">Reviews</a>
+                <a href="#about" class="hover:text-red-500 transition">About</a>
+                <a href="#contact" class="bg-red-600 text-white px-6 py-2.5 rounded-full hover:bg-black transition shadow-lg">Join Class!</a>
+            </div>
+
+            <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden flex flex-col items-center space-y-4 py-6 bg-white border-t mt-4">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#lessons" onclick="toggleMenu()">Play & Learn</a>
+            <a href="#achievements" onclick="toggleMenu()">Achievements</a>
+            <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#contact" class="bg-red-600 text-white px-8 py-2 rounded-full">Join Class!</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden py-16 md:py-32 px-6">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left z-10">
+                    <h1 class="text-5xl md:text-7xl mb-6 leading-tight">
+                        Master German <br>
+                        <span class="text-red-600 text-4xl md:text-6xl font-fun">With Frau Lewisky</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-600 max-w-lg mx-auto md:mx-0">
+                        Comprehensive online classes for ages 13 and above. From basics to Goethe certification. 🥨 🇩🇪
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#lessons" class="bg-yellow-400 text-black border-4 border-black px-8 py-4 rounded-2xl text-xl font-bold hover:bg-black hover:text-white transition transform hover:scale-105 text-center shadow-lg">
+                            Explore Lessons
+                        </a>
+                        <a href="https://wa.me/254790264680" target="_blank" class="bg-green-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Enrollment
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 relative">
+                    <div class="floating w-64 h-64 md:w-96 md:h-96 bg-red-500 rounded-full mx-auto border-8 border-white shadow-2xl flex items-center justify-center overflow-hidden">
+                       <span class="text-9xl">📚</span>
+                    </div>
+                    <div class="absolute -bottom-4 right-10 bg-white p-4 rounded-xl shadow-xl transform rotate-12">
+                        <p class="font-fun text-lg text-red-600">Willkommen! 👋</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 bg-black text-white rounded-[3rem] mx-4 my-10 shadow-2xl">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl mb-12 font-fun">Our Success Stories</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 border border-gray-800 rounded-3xl hover:bg-gray-900 transition group">
+                        <i class="fas fa-graduation-cap text-yellow-400 text-4xl mb-4 transition group-hover:scale-110"></i>
+                        <h3 class="text-2xl font-bold mb-4">Goethe Excellence</h3>
+                        <p class="text-gray-400">Dozens of students have successfully passed their Goethe A1-C1 exams with distinction.</p>
+                    </div>
+                    <div class="p-8 border border-gray-800 rounded-3xl hover:bg-gray-900 transition group">
+                        <i class="fas fa-plane-departure text-red-500 text-4xl mb-4 transition group-hover:scale-110"></i>
+                        <h3 class="text-2xl font-bold mb-4">German Scholarships</h3>
+                        <p class="text-gray-400">We take pride in alumni who have secured full academic scholarships to top universities in Germany.</p>
+                    </div>
+                    <div class="p-8 border border-gray-800 rounded-3xl hover:bg-gray-900 transition group">
+                        <i class="fas fa-briefcase text-blue-500 text-4xl mb-4 transition group-hover:scale-110"></i>
+                        <h3 class="text-2xl font-bold mb-4">Career Growth</h3>
+                        <p class="text-gray-400">Many of our adult learners have successfully integrated into the German workforce through intensive prep.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Lessons Preview -->
+        <section id="lessons" class="py-20 bg-white rounded-3xl mx-4 my-10 shadow-inner">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-4xl mb-4 font-fun">Play & Learn</h2>
+                <p class="text-gray-600 mb-12">Practice your pronunciation with our interactive word cards</p>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-yellow-50 p-8 rounded-3xl text-center card-bounce cursor-pointer border-2 border-yellow-200" onclick="speak('Guten Morgen')">
+                        <div class="text-5xl mb-4">☀️</div>
+                        <p class="text-xl font-bold">Guten Morgen</p>
+                        <p class="text-gray-500 italic text-sm">Good Morning</p>
+                    </div>
+                    <div class="bg-red-50 p-8 rounded-3xl text-center card-bounce cursor-pointer border-2 border-red-200" onclick="speak('Danke schön')">
+                        <div class="text-5xl mb-4">🙏</div>
+                        <p class="text-xl font-bold">Danke schön</p>
+                        <p class="text-gray-500 italic text-sm">Thank you</p>
+                    </div>
+                    <div class="bg-blue-50 p-8 rounded-3xl text-center card-bounce cursor-pointer border-2 border-blue-200" onclick="speak('Deutschland')">
+                        <div class="text-5xl mb-4">🇩🇪</div>
+                        <p class="text-xl font-bold">Deutschland</p>
+                        <p class="text-gray-500 italic text-sm">Germany</p>
+                    </div>
+                    <div class="bg-purple-50 p-8 rounded-3xl text-center card-bounce cursor-pointer border-2 border-purple-200" onclick="speak('Brot')">
+                        <div class="text-5xl mb-4">🍞</div>
+                        <p class="text-xl font-bold">Brot</p>
+                        <p class="text-gray-500 italic text-sm">Bread</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-20 px-6 bg-yellow-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl text-center mb-12 font-fun">What Our Students Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="review-card p-8">
+                        <div class="flex text-yellow-400 mb-4 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="italic text-gray-700 mb-6 leading-relaxed">"Frau Lewisky is the best! I passed my A1 exam in just 2 months. The classes are so engaging and professional."</p>
+                        <p class="font-bold text-sm text-red-600">- Sarah M., Goethe Candidate</p>
+                    </div>
+                    <div class="review-card p-8">
+                        <div class="flex text-yellow-400 mb-4 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="italic text-gray-700 mb-6 leading-relaxed">"The scholarship prep was life-changing. I am now studying in Berlin thanks to the solid foundation I built here."</p>
+                        <p class="font-bold text-sm text-red-600">- Kevin O., Scholar</p>
+                    </div>
+                    <div class="review-card p-8">
+                        <div class="flex text-yellow-400 mb-4 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="italic text-gray-700 mb-6 leading-relaxed">"Flexible hours and very high quality instruction. Perfect for anyone working while trying to learn a new language."</p>
+                        <p class="font-bold text-sm text-red-600">- Mary W., Professional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto bg-red-600 text-white rounded-[3rem] overflow-hidden flex flex-col md:flex-row shadow-2xl">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center">
+                    <h2 class="text-4xl mb-6 font-fun">Frau Lewisky</h2>
+                    <p class="text-xl mb-6 leading-relaxed">
+                        With over a decade of teaching experience, Frau Lewisky specializes in making German accessible to speakers of all backgrounds.
+                    </p>
+                    <div class="bg-white/10 p-4 rounded-2xl inline-block">
+                        <p class="font-bold text-yellow-300">✨ Expert Guidance</p>
+                        <p class="text-sm opacity-90">Personalized feedback for every student.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-yellow-400 h-64 md:h-auto flex items-center justify-center">
+                     <span class="text-[10rem]">👩‍🏫</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900 text-white rounded-t-[4rem]">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-5xl mb-8 leading-tight font-fun">Start Your Journey</h2>
+                <p class="text-xl mb-12 text-gray-400">Ready to learn? Get in touch with Frau Lewisky today.</p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+                    <!-- Standard Sized Buttons -->
+                    <a href="tel:+254790264680" class="bg-white text-black px-8 py-4 rounded-2xl hover:bg-gray-200 transition shadow-xl flex items-center gap-3 font-bold w-full sm:w-auto justify-center">
+                        <i class="fas fa-phone-alt text-red-600"></i>
+                        <span>Call +254 790 264 680</span>
+                    </a>
+                    <a href="https://wa.me/254790264680" class="bg-green-500 text-white px-8 py-4 rounded-2xl hover:bg-green-600 transition shadow-xl flex items-center gap-3 font-bold w-full sm:w-auto justify-center">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Message</span>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm italic">Classes held online via Zoom, Google Meet, or Skype.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white py-12 px-6 text-center border-t">
+            <p class="text-gray-600 mb-4">&copy; 2026 Learn German with Lewisky. All Rights Reserved.</p>
+            <p class="font-bold text-gray-800">
+                Designed by 
+                <a href="https://exevodesigners.online" target="_blank" class="text-red-600 hover:underline">
+                    Exevo Designers Network
+                </a>
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        function speak(text) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'de-DE';
+                utterance.pitch = 1.0;
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'transform', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
